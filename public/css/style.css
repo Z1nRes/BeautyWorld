@@ -136,7 +136,7 @@ body {
 }
 
 .social__icon {
-    width: 28px;
+    width: 32px;
     height: 28px;
     transition: .2s;
 }
@@ -221,15 +221,16 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 24%;
-    height: 30%;
-    color: #d1d1d1;
+    width: 445px;
+    height: 298px;
+    color: #ffffff;
     cursor: pointer;
     transition: .4s;
+    border-radius: 10px;
 }
 
 .about-main__video-overlay:hover {
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 20%);
     transition: .4s;
 }
 
@@ -240,6 +241,11 @@ main {
 
 .about-main__video-preview {
     position:  relative;
+    transition: .4s;
+}
+
+.about-main__video-preview:hover {
+    filter: brightness(1);
 }
 
 .about-bottom {
@@ -385,13 +391,11 @@ main {
     text-align: center;
     position: absolute;
     color: #FFFFFF;
-    display: none;
-    width: 35%;
-    transition: 1s;
+    display: block;
+    width: 150px;
 }
 
-.master__img {
-    position: relative;
+.master__card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,14 +404,24 @@ main {
     overflow: hidden;
 }
 
-.master__img:hover {
+.master__img {
+    position: relative;
+    height: 300px;
+    transition: .3s;
+}
+
+.master__card:hover {
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
     transition: 0.2s;
 }
 
-.master__img:hover .master__enroll {
-    display: block;
-    transition: 1s;
+.master__card:hover .master__enroll {
+    z-index: 1;
+}
+
+.master__card:hover .master__img {
+    filter: brightness(.6);
+    transition: .3s;
 }
 
 .master__name {
@@ -509,7 +523,7 @@ main {
 }
 
 .carousel__img:hover {
-    filter: brightness(.8);
+    filter: brightness(.6);
 }
 
 /* ^^works^^ */
@@ -584,8 +598,8 @@ main {
     flex-direction: row;
 }
 
-.social__item {
-    margin-right: 28px;
+.contacts-social__item {
+    margin-right: 24px;
 }
 
 .contacts__form {
