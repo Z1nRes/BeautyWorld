@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0", maximum-scale="1.0" user-scalable=no>
     <title>Beauty World</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./media/image/face_cream_makeup_icon_159268.ico">
@@ -10,41 +10,43 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header-top">
-          <div class="header__logo">Мир красоты</div>
-          <nav class="header__nav nav">
-              <a href="#" class="nav__element">Услуги и цены</a>
-              <a href="#" class="nav__element">Мастера</a>
-              <a href="#" class="nav__element">Наши работы</a>
-              <a href="#" class="nav__element">О нас</a>
-              <a href="#" class="nav__element">Контакты</a>
-          </nav>
-          <div class="header-contacts">
-            <a href="#" class="header-contacts__phone">8 (499) 686-17-62</a>
-            <p class="header-contacts__timetable">с 10.00 до 19.00 без выходных</p>
-          </div>
-        </div>
-        <div class="header-main">
-          <div class="header-main__content">
-            <p class="slogan-top">Создай свой образ вместе с нами</p>
-            <p class="slogan-bottom">Идеальный образ за 60 минут</p>
-            <div class="btn header-btn">
-              Записаться онлайн
+        <div class="container">
+          <div class="header-top">
+            <div class="header__logo">Мир красоты</div>
+            <nav class="header__nav nav">
+                <a href="#" class="nav__element">Услуги и цены</a>
+                <a href="#" class="nav__element">Мастера</a>
+                <a href="#" class="nav__element">Наши работы</a>
+                <a href="#" class="nav__element">О нас</a>
+                <a href="#" class="nav__element">Контакты</a>
+            </nav>
+            <div class="header-contacts">
+              <a href="#" class="header-contacts__phone">8 (499) 686-17-62</a>
+              <p class="header-contacts__timetable">с 10.00 до 19.00 без выходных</p>
             </div>
           </div>
-          <div class="header-main__woman-div">
-            <img src="./media/image/woman.png" alt="img" class="header-main__woman-img">
-            <div class="woman__sircle"></div>
-          </div>
-          <div class="header-main__social">
-              <a href="#" class="social__item"><img src="./media/image/icons/Vk.svg" alt="vk" class="social__icon"></a>
-              <a href="#" class="social__item"><img src="./media/image/icons/Instagram.svg" alt="Instagram" class="social__icon"></a>
-              <a href="#" class="social__item"><img src="./media/image/icons/YouTube.svg" alt="YouTube" class="social__icon"></a>
+          <div class="header-main">
+            <div class="header-main__content">
+              <p class="slogan-top">Создай свой образ вместе с нами</p>
+              <p class="slogan-bottom">Идеальный образ за 60 минут</p>
+              <div class="btn header-btn">
+                Записаться онлайн
+              </div>
+            </div>
+            <div class="header-main__woman-div">
+              <img src="./media/image/woman.png" alt="img" class="header-main__woman-img">
+              <div class="woman__sircle"></div>
+            </div>
+            <div class="header-main__social">
+                <a href="#" class="social__item"><img src="./media/image/icons/Vk.svg" alt="vk" class="social__icon"></a>
+                <a href="#" class="social__item"><img src="./media/image/icons/Instagram.svg" alt="Instagram" class="social__icon"></a>
+                <a href="#" class="social__item"><img src="./media/image/icons/YouTube.svg" alt="YouTube" class="social__icon"></a>
+            </div>
           </div>
         </div>
       </header>
       <main>
-        <section class="about">
+        <section class="about container">
           <h2 class="headline about-headline">О салоне</h2>
           <div class="about-main">
             <div class="about-main__text">
@@ -89,7 +91,7 @@
             </div>  
           </div>
         </section>
-        <section class="services">
+        <section class="services container">
           <h2 class="headline services-headline">Популярные услуги</h2>
           <div class="services-list">
             <div class="service__item">
@@ -124,7 +126,7 @@
             </div>
           </div>
         </section>
-        <section class="prices">
+        <section class="prices container">
           <h2 class="headline prices-headline">Услуги и цены</h2>
           <div class="prices-nav">
             <a href="#" class="prices-nav__element nav__element">Стрижка и укладка</a>
@@ -170,56 +172,58 @@
           </div>
         </section>
         <section class="masters">
-          <h2 class="headline masters-headline">Мастера</h2>
-          <p class="masters__lozung">Дружная команда настоящих профессионалов</p>
-          <div class="masters__list">
-            <div class="masters__element">
-              <div class="master__card">
-                <div class="master__enroll">Записаться к мастеру</div>
-                <div class="master__img">
-                  <img src="./media/image/staff/IrinaKKrasnova.png" alt="IrinaKKrasnova">
+          <div class="container">
+            <h2 class="headline masters-headline">Мастера</h2>
+            <p class="masters__lozung">Дружная команда настоящих профессионалов</p>
+            <div class="masters__list">
+              <div class="masters__element">
+                <div class="master__card">
+                  <div class="master__enroll">Записаться к мастеру</div>
+                  <div class="master__img">
+                    <img src="./media/image/staff/IrinaKKrasnova.png" alt="IrinaKKrasnova">
+                  </div>
                 </div>
+                <h3 class="master__name">Краснова Ирина</h3>
+                <p class="master__description">Мастер ногтевого сервиса</p>
+                <p class="master__experience">опыт работы 5 лет</p>
               </div>
-              <h3 class="master__name">Краснова Ирина</h3>
-              <p class="master__description">Мастер ногтевого сервиса</p>
-              <p class="master__experience">опыт работы 5 лет</p>
-            </div>
-            <div class="masters__element">
-              <div class="master__card">
-                <div class="master__enroll">Записаться к мастеру</div>
-                <div class="master__img">
-                  <img src="./media/image/staff/IrinaKKrasnova.png" alt="JanaKalilova">
+              <div class="masters__element">
+                <div class="master__card">
+                  <div class="master__enroll">Записаться к мастеру</div>
+                  <div class="master__img">
+                    <img src="./media/image/staff/IrinaKKrasnova.png" alt="JanaKalilova">
+                  </div>
                 </div>
+                <h3 class="master__name">Калилова Жанна</h3>
+                <p class="master__description">Визажист-стилист</p>
+                <p class="master__experience">опыт работы 5 лет</p>
               </div>
-              <h3 class="master__name">Калилова Жанна</h3>
-              <p class="master__description">Визажист-стилист</p>
-              <p class="master__experience">опыт работы 5 лет</p>
-            </div>
-            <div class="masters__element">
-              <div class="master__card">
-                <div class="master__enroll">Записаться к мастеру</div>
-                <div class="master__img">
-                  <img src="./media/image/staff/AlinaKiseleva.png" alt="AlinaKiseleva">
+              <div class="masters__element">
+                <div class="master__card">
+                  <div class="master__enroll">Записаться к мастеру</div>
+                  <div class="master__img">
+                    <img src="./media/image/staff/AlinaKiseleva.png" alt="AlinaKiseleva">
+                  </div>
                 </div>
+                <h3 class="master__name">Киселева Алина</h3>
+                <p class="master__description">Парикмахер</p>
+                <p class="master__experience">опыт работы 5 лет</p>
               </div>
-              <h3 class="master__name">Киселева Алина</h3>
-              <p class="master__description">Парикмахер</p>
-              <p class="master__experience">опыт работы 5 лет</p>
-            </div>
-            <div class="masters__element">
-              <div class="master__card">
-                <div class="master__enroll">Записаться к мастеру</div>
-                <div class="master__img">
-                  <img src="./media/image/staff/ElenaIvanova.png" alt="ElenaIvanova">
+              <div class="masters__element">
+                <div class="master__card">
+                  <div class="master__enroll">Записаться к мастеру</div>
+                  <div class="master__img">
+                    <img src="./media/image/staff/ElenaIvanova.png" alt="ElenaIvanova">
+                  </div>
                 </div>
+                <h3 class="master__name">Иванова Елена</h3>
+                <p class="master__description">Мастер ногтевого сервиса</p>
+                <p class="master__experience">опыт работы 5 лет</p>
               </div>
-              <h3 class="master__name">Иванова Елена</h3>
-              <p class="master__description">Мастер ногтевого сервиса</p>
-              <p class="master__experience">опыт работы 5 лет</p>
             </div>
           </div>
         </section>
-        <section class="works">
+        <section class="works container">
           <div class="works-header"><span class="headline works_headline">Наши работы</span><div class="pagginator"><div class="arrow arrowLeft"><img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft"></div><div class="arrow arrowRight"><img class="arrowRightImg" src="./media/image/icons/arrow.svg" alt="arrowRight"></div></div></div>
           <div class="carousel">
             <div class="carousel__item">
@@ -263,7 +267,7 @@
           </div>
         </section>
         <section class="contacts">
-          <div class="wrapper__contacts">
+          <div class="container wrapper__contacts">
             <div class="contacts__description">
               <p class="headline contacts-headline">Контакты</p>
               <p class="contacts__addres">Томск, проспект Ленина, дом 13</p>
@@ -289,7 +293,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer container">
         <div class="leftSide">
           <p class="footer__headline">© 2020 «Море красоты»</p>
           <a class="footer__link contacts__link" href="#">Политика конфиденциальности</a>
