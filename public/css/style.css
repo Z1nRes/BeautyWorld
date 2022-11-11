@@ -291,6 +291,14 @@ body {
     margin: 32px 0 100px 0;
 }
 
+.service__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .service__name {
     padding: 20px 0 8px 0;
     font-weight: 600;
@@ -696,6 +704,7 @@ input[type="text"]:focus {
     }
 
     .headline {
+        font-size: 35px;
         text-align: center;
     }
     /* header */
@@ -765,6 +774,23 @@ input[type="text"]:focus {
 
     .about-main__video {
         margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 89%;
+    }
+
+    .about-main__video-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .about-main__video-overlay {
+        width: 80%;
     }
 
     .about-main__text {
@@ -789,11 +815,23 @@ input[type="text"]:focus {
         width: 70%;
     }
 
+    .service__item {
+        width: 80%;
+    }
+
+    .service__description {
+        width: 90%;
+    }
+
     .services {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    .services-headline {
+        width: 90%;
+    }    
 
     /* prices */
 
@@ -804,16 +842,23 @@ input[type="text"]:focus {
     }
 
     .prices-nav {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
     }
 
     .prices-nav__element {
         margin: 0 30px 0 0;
     }
 
-    .price__element {
-        width: 100%;
+    .prices-list {
+        width: 80%;
     }
+
+    .price__element {
+        width: 79%;
+    }
+
 
     /* masters */
 
@@ -854,7 +899,10 @@ input[type="text"]:focus {
     }
 
     .carousel {
-        grid-template-columns: 1fr;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0;
     }
 
     /* brands */
@@ -921,5 +969,9 @@ input[type="text"]:focus {
 
     .footer__headline {
         margin-bottom: 32px;
+    }
+
+    .footer__nav {
+        display: none;
     }
 }
