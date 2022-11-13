@@ -1,27 +1,32 @@
 {
-  "name": "bw",
-  "version": "0.1.0",
-  "private": true,
+  "name": "beautyworld",
+  "version": "1.0.0",
+  "description": "```\r npm install\r ```",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "start": "gulp",
+    "build": "gulp build"
   },
-  "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z1nRes/BeautyWorld.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Z1nRes/BeautyWorld/issues"
+  },
+  "homepage": "https://github.com/Z1nRes/BeautyWorld#readme",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1"
+  }
 }
