@@ -11,13 +11,25 @@
       <header class="header">
         <div class="container">
           <div class="header-top">
-            <div class="header__logo">Мир красоты</div>
-            <nav class="header__nav nav">
-                <a href="#" class="nav__element">Услуги и цены</a>
-                <a href="#" class="nav__element">Мастера</a>
-                <a href="#" class="nav__element">Наши работы</a>
-                <a href="#" class="nav__element">О нас</a>
-                <a href="#" class="nav__element">Контакты</a>
+
+            <div class="popup" id="popup"></div>
+
+            <div class="header__left-side">
+              <div class="hamb">
+                <div class="hamb__field" id="hamb">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </div>
+              <span class="header__logo">Мир красоты</span>
+            </div>
+            <nav class="header__nav nav" id="menu">
+                <a href="#prices" class="nav__element">Услуги и цены</a>
+                <a href="#masters" class="nav__element">Мастера</a>
+                <a href="#works" class="nav__element">Наши работы</a>
+                <a href="#about" class="nav__element">О нас</a>
+                <a href="#contacts" class="nav__element">Контакты</a>
             </nav>
             <div class="header-contacts">
               <a href="#" class="header-contacts__phone">8 (499) 686-17-62</a>
@@ -45,7 +57,7 @@
         </div>
       </header>
       <main>
-        <section class="about container">
+        <section class="about container" id="about">
           <h2 class="headline about-headline">О салоне</h2>
           <div class="about-main">
             <div class="about-main__text">
@@ -90,7 +102,7 @@
             </div>  
           </div>
         </section>
-        <section class="services container">
+        <section class="services container" id="services">
           <h2 class="headline services-headline">Популярные услуги</h2>
           <div class="services-list">
             <div class="service__item">
@@ -125,7 +137,7 @@
             </div>
           </div>
         </section>
-        <section class="prices container">
+        <section class="prices container" id="prices">
           <h2 class="headline prices-headline">Услуги и цены</h2>
           <div class="prices-nav">
             <a href="#" class="prices-nav__element nav__element">Стрижка и укладка</a>
@@ -170,7 +182,7 @@
             </div>
           </div>
         </section>
-        <section class="masters">
+        <section class="masters" id="masters">
           <div class="container">
             <h2 class="headline masters-headline">Мастера</h2>
             <p class="masters__lozung">Дружная команда настоящих профессионалов</p>
@@ -222,8 +234,18 @@
             </div>
           </div>
         </section>
-        <section class="works container">
-          <div class="works-header"><span class="headline works_headline">Наши работы</span><div class="pagginator"><div class="arrow arrowLeft"><img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft"></div><div class="arrow arrowRight"><img class="arrowRightImg" src="./media/image/icons/arrow.svg" alt="arrowRight"></div></div></div>
+        <section class="works container" id="works">
+          <div class="works-header">
+            <span class="headline works_headline">Наши работы</span>
+            <div class="pagginator">
+              <div class="arrow arrowLeft">
+                <img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft">
+              </div>
+              <div class="arrow arrowRight">
+                <img class="arrowRightImg" src="./media/image/icons/arrow.svg" alt="arrowRight">
+              </div>
+            </div>
+          </div>
           <div class="carousel">
             <div class="carousel__item">
               <div class="carousel__zoom">
@@ -265,7 +287,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="container wrapper__contacts">
             <div class="contacts__description">
               <p class="headline contacts-headline">Контакты</p>
@@ -283,9 +305,9 @@
               <p class="form__name">Быстрая запись</p>
               <p class="form__description">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</p>
               <form class="form">
-                <input type="text" placeholder="Ваше имя">
-                <input type="text" placeholder="+7 (___) ___-__-__">
-                <input class="btn btn-form" type="submit" value="Записаться">
+                <input type="text" name="name" placeholder="Ваше имя">
+                <input type="text" name="phone" placeholder="+7 (___) ___-__-__">
+                <button class="btn btn-form" type="submit">Записаться</button>
               </form>
               <p class="form__personal-data">Нажимая на кнопку вы соглашаетесь с <a href="#" class="contacts__link">обработкой персональных данных</a></p>
             </div>
@@ -305,5 +327,6 @@
         </div>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

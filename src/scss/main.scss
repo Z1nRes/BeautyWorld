@@ -1,6 +1,15 @@
 @import "common";
 
 /* header */
+
+.hamb{
+    display: none;
+}
+
+.popup{
+    display: none;
+}
+
 .header {
     background: url(../media/image/header_bg.svg);
     padding-top: 10px;
@@ -14,6 +23,8 @@
     &__logo{
         font-size: 24px;
         font-weight: 700;
+        display: flex;
+        align-items: center;
     }
     &-contacts {
         display: flex;
