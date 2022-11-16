@@ -1,3 +1,4 @@
+
 const hamb = document.querySelector("#hamb");
 const popup = document.querySelector("#popup");
 const body = document.body;
@@ -36,9 +37,15 @@ function serializeForm(formNode){
     console.log(Array.from(data.entries()))
 }
 
+function formSend(){
+    alert('Ваша форма успешно отправлена!')
+}
+
 function handleFormSubmit(e){
     e.preventDefault();
     serializeForm(applicantForm);
+    document.querySelector('form').reset();
+    formSend();
 }
 
 const applicantForm = document.querySelector("form");
@@ -46,7 +53,17 @@ applicantForm.addEventListener('submit', handleFormSubmit);
 
 // form value^^^
 
-// popup form
+//tabs
 
-// const headerBtn = document.querySelector('header-btn');
-// const serviceBtn = document.querySelector('service-btn');
+function openTab(tabId){
+    let tabContent = document.querySelector('tabs__content');
+
+    for (let i=0; i < tabContent.lenght; i++) {
+        tabContent[i].style.display = "none";
+    }
+
+    document.getElementById(tabId).style.display = "grid";
+
+}
+
+//https://codepen.io/nickfazzpdx/pen/MRWrjJ

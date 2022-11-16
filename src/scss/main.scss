@@ -286,6 +286,7 @@
 
 .prices{
     &-nav{
+        user-select: none;
         margin: 32px 0 57px 0;
         &__element{
             &:first-child{
@@ -293,10 +294,6 @@
             }
             &:hover{
                 cursor: pointer;
-            }
-            &:active{
-                border-bottom: 2px solid #00BF78;
-                transition: 0s;
             }
         }
     }
@@ -333,6 +330,38 @@
     color: #00BF78;
     font-size: 20px;
     font-weight: 600;
+}
+
+.tabs__content{
+    display: none;
+    transform: scaleY(0.8);
+    opacity: 0;
+    -webkit-animation: showContent 0.6s forwards;
+    animation: showContent 0.6s forwards;
+    &-active{
+        display: grid;
+    }
+}
+
+@-webkit-keyframes showContent {
+    0% {
+      transform: scaleY(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+}
+  @keyframes showContent {
+    0% {
+      transform: scaleY(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
 }
 
 /* ^^prices^^ */
