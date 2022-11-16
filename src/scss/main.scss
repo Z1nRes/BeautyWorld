@@ -332,14 +332,19 @@
     font-weight: 600;
 }
 
-.tabs__content{
-    display: none;
-    transform: scaleY(0.8);
-    opacity: 0;
-    -webkit-animation: showContent 0.6s forwards;
-    animation: showContent 0.6s forwards;
-    &-active{
-        display: grid;
+.tabs{
+    &__content{
+        display: none;
+        transform: scaleY(0.8);
+        opacity: 0;
+        -webkit-animation: showContent 0.6s forwards;
+        animation: showContent 0.6s forwards;
+        &-active{
+            display: grid;
+        }
+    }
+    &__caption-active{
+        border-bottom: solid 2px #00BF78;
     }
 }
 

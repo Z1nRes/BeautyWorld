@@ -55,15 +55,36 @@ applicantForm.addEventListener('submit', handleFormSubmit);
 
 //tabs
 
-function openTab(tabId){
-    let tabContent = document.querySelector('tabs__content');
+function openTab(tabId, linkId){
+    let tabContent = document.getElementsByClassName('tabs__content');
 
-    for (let i=0; i < tabContent.lenght; i++) {
+    for (let i=0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
 
     document.getElementById(tabId).style.display = "grid";
-
 }
 
-//https://codepen.io/nickfazzpdx/pen/MRWrjJ
+function setActiveLink(linkId){
+    let links = document.getElementsByClassName('tabs__caption');
+
+    for (let i=0; i < links.length; i++) {
+        links[i].classList.remove('tabs__caption-active');
+    }
+
+    document.getElementById(linkId).classList.add('tabs__caption-active');
+}
+
+let haircutLink = document.getElementById('haircutLink');
+let cosmetologyLink = document.getElementById('cosmetologyLink');
+let manicureLink = document.getElementById('manicureLink');
+let makeupLink = document.getElementById('makeupLink');
+let browsLink = document.getElementById('browsLink');
+let massageLink = document.getElementById('massageLink');
+
+haircutLink.addEventListener("click", function(){openTab("haircut"); setActiveLink('haircutLink')}, false);
+cosmetologyLink.addEventListener("click", function(){openTab("cosmetology"); setActiveLink('cosmetologyLink')}, false);
+manicureLink.addEventListener("click", function(){openTab("manicure"); setActiveLink('manicureLink')}, false);
+makeupLink.addEventListener("click", function(){openTab("makeup"); setActiveLink('makeupLink')}, false);
+browsLink.addEventListener("click", function(){openTab("brows"); setActiveLink('browsLink')}, false);
+massageLink.addEventListener("click", function(){openTab("massage"); setActiveLink('massageLink')}, false);
