@@ -1,3 +1,27 @@
+import { Fancybox, Carousel } from "../node_modules/@fancyapps/ui";
+
+const myCarousel = new Carousel(document.querySelector(".carousel"), {
+    preload: 2,
+});
+  
+  // Customize Fancybox
+Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs: false,
+    Toolbar: false,
+
+    closeButton: "top",
+
+    Carousel: {
+        Dots: true,
+        on: {
+        change: (that) => {
+            myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
+            friction: 0,
+            });
+        },
+        },
+    },
+});
 
 const hamb = document.querySelector("#hamb");
 const popup = document.querySelector("#popup");

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">    <title>Beauty World</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="./media/image/face_cream_makeup_icon_159268.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -413,47 +417,73 @@
           </div>
         </section>
         <section class="works container" id="works">
+
           <div class="works-header">
             <span class="headline works_headline">Наши работы</span>
             <div class="pagginator">
-              <div class="arrow arrowLeft">
+              <div class="arrow arrowLeft swiper-button-prev">
                 <img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft">
               </div>
               <div class="arrow arrowRight">
-                <img class="arrowRightImg" src="./media/image/icons/arrow.svg" alt="arrowRight">
+                <img class="arrowRightImg swiper-button-next" src="./media/image/icons/arrow.svg" alt="arrowRight">
               </div>
             </div>
           </div>
+          
           <div class="carousel">
+
             <div class="carousel__item">
               <div class="carousel__zoom">
                 <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
                 <span class="zoom__description">Увеличить</span>
               </div>
-              <div class="carousel__img"><img src="./media/image/ourWork/work1.png" alt="work1"></div>
+              <div class="carousel__img">
+                <!-- <a href=""> -->
+                  <img src="./media/image/ourWork/work1.png" alt="work1">
+                <!-- </a> -->
+              </div>
             </div>
+
+            <div class="carousel__item">
+              <div class="carousel__zoom">
+                <div class="zoom__icon">
+                  <img src="./media/image/icons/search.svg" alt="searchIcon">
+                </div>
+                <span class="zoom__description">Увеличить</span>
+              </div>
+              <div class="carousel__img">
+                <!-- <a href=""> -->
+                  <img src="./media/image/ourWork/work2.png" alt="work2">
+                <!-- </a> -->
+              </div>
+            </div>
+
             <div class="carousel__item">
               <div class="carousel__zoom">
                 <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
                 <span class="zoom__description">Увеличить</span>
               </div>
-              <div class="carousel__img"><img src="./media/image/ourWork/work2.png" alt="work2"></div>
+              <div class="carousel__img">
+                <!-- <a href=""> -->
+                  <img src="./media/image/ourWork/work3.png" alt="work3">
+                <!-- </a> -->
+              </div>
             </div>
+
             <div class="carousel__item">
               <div class="carousel__zoom">
                 <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
                 <span class="zoom__description">Увеличить</span>
               </div>
-              <div class="carousel__img"><img src="./media/image/ourWork/work3.png" alt="work3"></div>
-            </div>
-            <div class="carousel__item">
-              <div class="carousel__zoom">
-                <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
-                <span class="zoom__description">Увеличить</span>
+              <div class="carousel__img">
+                <!-- <a href=""> -->
+                  <img src="./media/image/ourWork/work4.png" alt="work4">
+                <!-- </a> -->
               </div>
-              <div class="carousel__img"><img src="./media/image/ourWork/work4.png" alt="work4"></div>
             </div>
+
           </div>
+
           <div class="brands">
             <h2 class="brands-headline">Бренды, которые мы используем в работе</h2>
             <div class="brands__list">
@@ -505,6 +535,6 @@
         </div>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="../src/script.js"></script>
   </body>
 </html>
