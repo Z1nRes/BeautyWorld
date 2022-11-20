@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
     />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
   </head>
   <body>
     <div class="wrapper">
@@ -44,7 +46,7 @@
             <div class="header-main__content">
               <p class="slogan-top">Создай свой образ вместе с нами</p>
               <p class="slogan-bottom">Идеальный образ за 60 минут</p>
-              <div class="btn header-btn">
+              <div class="btn header-btn" data-fancybox href="#extended-form">
                 Записаться онлайн
               </div>
             </div>
@@ -420,14 +422,18 @@
 
           <div class="works-header">
             <span class="headline works_headline">Наши работы</span>
-            <div class="pagginator">
-              <div class="arrow arrowLeft swiper-button-prev">
-                <img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft">
-              </div>
-              <div class="arrow arrowRight">
-                <img class="arrowRightImg swiper-button-next" src="./media/image/icons/arrow.svg" alt="arrowRight">
+            
+            <div class="pagginator-wrapper">
+              <div class="pagginator">
+                <a class="arrow arrowLeft slick-prev">
+                  <img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft">
+                </a>
+                <a class="arrow arrowRight slick-next">
+                  <img class="arrowRightImg" src="./media/image/icons/arrow.svg" alt="arrowRight">
+                </a>
               </div>
             </div>
+
           </div>
           
           <div class="carousel">
@@ -438,9 +444,9 @@
                 <span class="zoom__description">Увеличить</span>
               </div>
               <div class="carousel__img">
-                <!-- <a href=""> -->
+                <a href="./media/image/ourWork/work1.png" data-fancybox="gallery">
                   <img src="./media/image/ourWork/work1.png" alt="work1">
-                <!-- </a> -->
+                </a>
               </div>
             </div>
 
@@ -452,9 +458,9 @@
                 <span class="zoom__description">Увеличить</span>
               </div>
               <div class="carousel__img">
-                <!-- <a href=""> -->
+                <a href="./media/image/ourWork/work2.png" data-fancybox="gallery">
                   <img src="./media/image/ourWork/work2.png" alt="work2">
-                <!-- </a> -->
+                </a>
               </div>
             </div>
 
@@ -464,9 +470,9 @@
                 <span class="zoom__description">Увеличить</span>
               </div>
               <div class="carousel__img">
-                <!-- <a href=""> -->
+                <a href="./media/image/ourWork/work3.png" data-fancybox="gallery">
                   <img src="./media/image/ourWork/work3.png" alt="work3">
-                <!-- </a> -->
+                </a>
               </div>
             </div>
 
@@ -476,10 +482,25 @@
                 <span class="zoom__description">Увеличить</span>
               </div>
               <div class="carousel__img">
-                <!-- <a href=""> -->
+                <a href="./media/image/ourWork/work4.png" data-fancybox="gallery">
                   <img src="./media/image/ourWork/work4.png" alt="work4">
-                <!-- </a> -->
+                </a>
               </div>
+            </div>
+
+            <!-- <div class="carousel__zoom">
+              <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
+              <span class="zoom__description">Увеличить</span>
+            </div>
+            <div class="carousel__img">
+              <a href="./media/image/ourWork/work4.png" data-fancybox="gallery">
+                <img src="./media/image/ourWork/work4.png" alt="work4">
+              </a>
+            </div> -->
+
+
+            <div class="carousel__item">
+              
             </div>
 
           </div>
@@ -535,6 +556,41 @@
         </div>
       </footer>
     </div>
-    <script type="module" src="../src/script.js"></script>
+    <form class="popup-form fancybox" style="display: none;" id="extended-form" action="">
+      <label for="name">
+        Ваше имя
+        <input type="text" name="name">
+      </label>
+      <label for="phone">
+        Номер телефона
+        <input type="text" name="phone">
+      </label>
+      <label for="master-select" class="select-label">
+        Выберите мастера
+        <select name="master-select" id="">
+          <option value="1">Краснова Ирина</option>
+          <option value="2">Калилова Жанна</option>
+          <option value="3">Киселева Алина</option>
+          <option value="4">Иванова Елена</option>
+        </select>
+      </label>
+      <label for="service" class="select-label">
+        Выберите услугу
+        <select name="service" id="">
+          <option value="1">Стрижка и укладка</option>
+          <option value="2">Косметология</option>
+          <option value="3">Маникюр и педикюр</option>
+          <option value="4">Макияж</option>
+          <option value="5">Брови и ресницы</option>
+          <option value="6">Массаж</option>
+        </select>
+      </label>
+      <label for="name">
+        Дата визита
+        <input type="date" name="name">
+      </label>
+      <button class="btn btn-form popup-form__btn">Записаться</button>
+    </form>
+    <script type="text/javascript" src="js/main.min.js" defer></script>
   </body>
 </html>

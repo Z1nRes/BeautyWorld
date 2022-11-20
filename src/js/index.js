@@ -1,26 +1,20 @@
-import { Fancybox, Carousel } from "../node_modules/@fancyapps/ui";
+import "@fancyapps/ui";
+import "slick-carousel/slick/slick";
+import $ from "jquery";
 
-const myCarousel = new Carousel(document.querySelector(".carousel"), {
-    preload: 2,
-});
-  
-  // Customize Fancybox
-Fancybox.bind('[data-fancybox="gallery"]', {
-    Thumbs: false,
-    Toolbar: false,
-
-    closeButton: "top",
-
-    Carousel: {
-        Dots: true,
-        on: {
-        change: (that) => {
-            myCarousel.slideTo(myCarousel.findPageForSlide(that.page), {
-            friction: 0,
-            });
+$('.carousel').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: ".slick-prev",
+    nextArrow: ".slick-next",
+    responsive: [{
+        breakpoint: 1500,
+        settings: {
+            infinite: true,
         },
-        },
-    },
+    },]
 });
 
 const hamb = document.querySelector("#hamb");
