@@ -10,7 +10,6 @@
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
     />
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
   </head>
   <body>
     <div class="wrapper">
@@ -115,31 +114,31 @@
               <div class="service__img"><img src="./media/image/image_preview.png" alt="image_preview"></div>
               <h3 class="service__name">Маникюр</h3>
               <p class="service__description">Аппаратный, комбинированный или классический.</p>
-              <div class="btn service__btn"><span>Записаться</span></div>
+              <div class="btn service__btn" data-fancybox href="#extended-form"><span>Записаться</span></div>
             </div>
             <div class="service__item">
               <div class="service__img"><img src="./media/image/image_preview.png" alt="image_preview"></div>
               <h3 class="service__name">Покрытие гель-лак</h3>
               <p class="service__description">Гель-лак наносится в несколько слоев с использованием базы и топа. Каждый слой полимеризуется в LED-лампе.</p>
-              <div class="btn service__btn"><span>Записаться</span></div>
+              <div class="btn service__btn" data-fancybox href="#extended-form"><span>Записаться</span></div>
             </div>
             <div class="service__item">
               <div class="service__img"><img src="./media/image/image_preview.png" alt="image_preview"></div>
               <h3 class="service__name">Бразильский маникюр</h3>
               <p class="service__description">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-              <div class="btn service__btn"><span>Записаться</span></div>
+              <div class="btn service__btn" data-fancybox href="#extended-form"><span>Записаться</span></div>
             </div>
             <div class="service__item">
               <div class="service__img"><img src="./media/image/image_preview.png" alt="image_preview"></div>
               <h3 class="service__name">Педикюр</h3>
               <p class="service__description">Аппаратный, комбинированный или классический.</p>
-              <div class="btn service__btn"><span>Записаться</span></div>
+              <div class="btn service__btn" data-fancybox href="#extended-form"><span>Записаться</span></div>
             </div>
             <div class="service__item">
               <div class="service__img"><img src="./media/image/image_preview.png" alt="image_preview"></div>
               <h3 class="service__name">Парафинотерапия</h3>
               <p class="service__description">Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.</p>
-              <div class="btn service__btn"><span>Записаться</span></div>
+              <div class="btn service__btn" data-fancybox href="#extended-form"><span>Записаться</span></div>
             </div>
           </div>
         </section>
@@ -371,7 +370,7 @@
             <h2 class="headline masters-headline">Мастера</h2>
             <p class="masters__lozung">Дружная команда настоящих профессионалов</p>
             <div class="masters__list">
-              <div class="masters__element">
+              <div class="masters__element" data-fancybox href="#extended-form">
                 <div class="master__card">
                   <div class="master__enroll">Записаться к мастеру</div>
                   <div class="master__img">
@@ -382,7 +381,7 @@
                 <p class="master__description">Мастер ногтевого сервиса</p>
                 <p class="master__experience">опыт работы 5 лет</p>
               </div>
-              <div class="masters__element">
+              <div class="masters__element" data-fancybox href="#extended-form">
                 <div class="master__card">
                   <div class="master__enroll">Записаться к мастеру</div>
                   <div class="master__img">
@@ -393,7 +392,7 @@
                 <p class="master__description">Визажист-стилист</p>
                 <p class="master__experience">опыт работы 5 лет</p>
               </div>
-              <div class="masters__element">
+              <div class="masters__element" data-fancybox href="#extended-form">
                 <div class="master__card">
                   <div class="master__enroll">Записаться к мастеру</div>
                   <div class="master__img">
@@ -404,7 +403,7 @@
                 <p class="master__description">Парикмахер</p>
                 <p class="master__experience">опыт работы 5 лет</p>
               </div>
-              <div class="masters__element">
+              <div class="masters__element" data-fancybox href="#extended-form">
                 <div class="master__card">
                   <div class="master__enroll">Записаться к мастеру</div>
                   <div class="master__img">
@@ -565,18 +564,18 @@
         Номер телефона
         <input type="text" name="phone">
       </label>
-      <label for="master-select" class="select-label">
+      <label for="master-select" class="select-label master-label">
         Выберите мастера
-        <select name="master-select" id="">
+        <select name="master-select" id="master-select">
           <option value="1">Краснова Ирина</option>
           <option value="2">Калилова Жанна</option>
           <option value="3">Киселева Алина</option>
           <option value="4">Иванова Елена</option>
         </select>
       </label>
-      <label for="service" class="select-label">
+      <label for="service" class="select-label service-label">
         Выберите услугу
-        <select name="service" id="">
+        <select name="service" id="service-select">
           <option value="1">Стрижка и укладка</option>
           <option value="2">Косметология</option>
           <option value="3">Маникюр и педикюр</option>

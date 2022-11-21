@@ -684,7 +684,7 @@ input[type="text"]:focus {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 25%;
+    width: 30%;
     background-color: #59d0d4;
     border-radius: 10px;
     padding: 50px;
@@ -701,7 +701,7 @@ label{
 }
 
 select{
-    width: 189px;
+    width: 214px;
     outline: none;
     height: 44px;
     padding-left: 16px;
@@ -721,13 +721,21 @@ select{
         border-color: #ff7146 transparent transparent transparent;
         border-width: 6px 5px 5px;
         position: absolute;
-        top: 50%;
-        right: 5px;
-        z-index: 1;
-        margin-top: -3px;
+        right: 45px;
+        z-index: -1;
     }
 }
 
+.master-label::after{
+    top: 244px;
+}
 
+.service-label::after{
+    top: 317px;
+}
+
+.popup-form__btn{
+    max-width: none;
+}
 /* adaptive */
 @import "media";
