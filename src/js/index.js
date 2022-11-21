@@ -1,20 +1,14 @@
 import "@fancyapps/ui";
-import "slick-carousel/slick/slick";
 import $ from "jquery";
 
-$('.carousel').slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    prevArrow: ".slick-prev",
-    nextArrow: ".slick-next",
-    responsive: [{
-        breakpoint: 1500,
-        settings: {
-            infinite: true,
-        },
-    },]
+new Swiper('.swiper', {
+    slidesPerView: 4,
+    loop: true,
+
+    navigation: {
+        nextEl: '.arrowRight',
+        prevEl: '.arrowLeft',
+    },
 });
 
 const hamb = document.querySelector("#hamb");

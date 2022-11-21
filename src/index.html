@@ -9,7 +9,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
     />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/> -->
   </head>
   <body>
     <div class="wrapper">
@@ -74,13 +78,15 @@
                 индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
             </div>
             <div class="about-main__video">
-              <div class="about-main__video-overlay">
-                <img class="about-main__video-play" src="./media/image/icons/play.svg" alt="play">
-                <p class="about-main__video-text">Короткое видео о нас</p>
-              </div>
-              <div class="about-main__video-preview">
-                <img src="./media/image/video_preview.png" alt="video">
-              </div>
+              <a href="https://www.youtube.com/watch?v=pqRc1Y1vAh4" data-fancybox="">
+                <div class="about-main__video-overlay">
+                  <img class="about-main__video-play" src="./media/image/icons/play.svg" alt="play">
+                  <p class="about-main__video-text">Короткое видео о нас</p>
+                </div>
+                <div class="about-main__video-preview">
+                    <img src="./media/image/video_preview.png" alt="video">
+                </div>
+              </a>
             </div>
           </div>
           <div class="about-bottom">
@@ -424,85 +430,80 @@
             
             <div class="pagginator-wrapper">
               <div class="pagginator">
-                <a class="arrow arrowLeft slick-prev">
-                  <img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft">
-                </a>
-                <a class="arrow arrowRight slick-next">
-                  <img class="arrowRightImg" src="./media/image/icons/arrow.svg" alt="arrowRight">
-                </a>
+                <div class="slick-prev">
+                  <div class="arrow arrowLeft">
+                    <img src="./media/image/icons/arrow.svg" alt="arrow arrowLeft">
+                  </div>
+                </div>
+                <div class="slick-next">
+                  <div class="arrow arrowRight">
+                    <img class="arrowRightImg" src="./media/image/icons/arrow.svg" alt="arrowRight">
+                  </div>
+                </div>
               </div>
             </div>
 
+          </div>
+
+          <div class="carousel">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+  
+                <div class="swiper-slide">
+                  <div class="carousel__zoom">
+                    <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
+                    <span class="zoom__description">Увеличить</span>
+                  </div>
+                  <div class="carousel__img">
+                    <a href="./media/image/ourWork/work1.png" data-fancybox="gallery">
+                      <img src="./media/image/ourWork/work1.png" alt="work1">
+                    </a>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="carousel__zoom">
+                    <div class="zoom__icon">
+                      <img src="./media/image/icons/search.svg" alt="searchIcon">
+                    </div>
+                    <span class="zoom__description">Увеличить</span>
+                  </div>
+                  <div class="carousel__img">
+                    <a href="./media/image/ourWork/work2.png" data-fancybox="gallery">
+                      <img src="./media/image/ourWork/work2.png" alt="work2">
+                    </a>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide">
+                  <div class="carousel__zoom">
+                    <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
+                    <span class="zoom__description">Увеличить</span>
+                  </div>
+                  <div class="carousel__img">
+                    <a href="./media/image/ourWork/work3.png" data-fancybox="gallery">
+                      <img src="./media/image/ourWork/work3.png" alt="work3">
+                    </a>
+                  </div>
+                </div>
+  
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__zoom">
+                    <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
+                    <span class="zoom__description">Увеличить</span>
+                  </div>
+                  <div class="carousel__img">
+                    <a href="./media/image/ourWork/work4.png" data-fancybox="gallery">
+                      <img src="./media/image/ourWork/work4.png" alt="work4">
+                    </a>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </div>
           </div>
           
-          <div class="carousel">
-
-            <div class="carousel__item">
-              <div class="carousel__zoom">
-                <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
-                <span class="zoom__description">Увеличить</span>
-              </div>
-              <div class="carousel__img">
-                <a href="./media/image/ourWork/work1.png" data-fancybox="gallery">
-                  <img src="./media/image/ourWork/work1.png" alt="work1">
-                </a>
-              </div>
-            </div>
-
-            <div class="carousel__item">
-              <div class="carousel__zoom">
-                <div class="zoom__icon">
-                  <img src="./media/image/icons/search.svg" alt="searchIcon">
-                </div>
-                <span class="zoom__description">Увеличить</span>
-              </div>
-              <div class="carousel__img">
-                <a href="./media/image/ourWork/work2.png" data-fancybox="gallery">
-                  <img src="./media/image/ourWork/work2.png" alt="work2">
-                </a>
-              </div>
-            </div>
-
-            <div class="carousel__item">
-              <div class="carousel__zoom">
-                <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
-                <span class="zoom__description">Увеличить</span>
-              </div>
-              <div class="carousel__img">
-                <a href="./media/image/ourWork/work3.png" data-fancybox="gallery">
-                  <img src="./media/image/ourWork/work3.png" alt="work3">
-                </a>
-              </div>
-            </div>
-
-            <div class="carousel__item">
-              <div class="carousel__zoom">
-                <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
-                <span class="zoom__description">Увеличить</span>
-              </div>
-              <div class="carousel__img">
-                <a href="./media/image/ourWork/work4.png" data-fancybox="gallery">
-                  <img src="./media/image/ourWork/work4.png" alt="work4">
-                </a>
-              </div>
-            </div>
-
-            <!-- <div class="carousel__zoom">
-              <div class="zoom__icon"><img src="./media/image/icons/search.svg" alt="searchIcon"></div>
-              <span class="zoom__description">Увеличить</span>
-            </div>
-            <div class="carousel__img">
-              <a href="./media/image/ourWork/work4.png" data-fancybox="gallery">
-                <img src="./media/image/ourWork/work4.png" alt="work4">
-              </a>
-            </div> -->
-
-
-            <div class="carousel__item">
-              
-            </div>
-
-          </div>
 
           <div class="brands">
             <h2 class="brands-headline">Бренды, которые мы используем в работе</h2>
@@ -590,6 +591,7 @@
       </label>
       <button class="btn btn-form popup-form__btn">Записаться</button>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/main.min.js" defer></script>
   </body>
 </html>

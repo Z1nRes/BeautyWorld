@@ -174,6 +174,7 @@
             }
         }
         &__video{
+            border-radius: 10px;
             &-play{
                 display: flex;
                 flex-direction: column;
@@ -195,7 +196,6 @@
                 color: #ffffff;
                 cursor: pointer;
                 transition: .4s;
-                border-radius: 10px;
                 &:hover{
                     background-color: rgba(0, 0, 0, 20%);
                     transition: .4s;
@@ -449,26 +449,13 @@
 }
 
 .pagginator {
+    user-select: none;
     display: flex;
     width: 60px;
     &-wrapper{
         position: relative;
     }
 }
-
-.slick{
-    &-next{
-        &::before{
-            content: "";
-        }
-    }
-    &-prev{
-        &::before{
-            content: "";
-        }
-    }
-}
-
 
 .arrow {
     display: flex;
@@ -494,14 +481,18 @@
     transition: 0.5s;
 }
 
-.carousel {
-    padding-top: 52px;
-    margin-left: -165px;
-    &__item{
+.swiper {
+    &-slide{
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
+
+.carousel {
+    padding-top: 52px;
+    margin-left: -165px;
+    width: 1440px;
     &__zoom{
         position: absolute;
         z-index: -1;
