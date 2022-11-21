@@ -4,7 +4,7 @@ import $ from "jquery";
 new Swiper('.swiper', {
     slidesPerView: 4,
     loop: true,
-
+    speed: 700,
     navigation: {
         nextEl: '.arrowRight',
         prevEl: '.arrowLeft',

@@ -78,7 +78,7 @@
                 индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
             </div>
             <div class="about-main__video">
-              <a href="https://www.youtube.com/watch?v=pqRc1Y1vAh4" data-fancybox="">
+              <a href="https://www.youtube.com/watch?v=_6Xa4f6Izh4" data-fancybox="">
                 <div class="about-main__video-overlay">
                   <img class="about-main__video-play" src="./media/image/icons/play.svg" alt="play">
                   <p class="about-main__video-text">Короткое видео о нас</p>
@@ -534,8 +534,8 @@
               <p class="form__name">Быстрая запись</p>
               <p class="form__description">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</p>
               <form class="form">
-                <input class="input" type="text" name="name" autocomplete="off" placeholder="Ваше имя">
-                <input class="input" type="text" name="phone" autocomplete="off" placeholder="+7 (___) ___-__-__">
+                <input class="input" type="text" name="name" autocomplete="off" placeholder="Ваше имя" required>
+                <input class="input" type="text" name="phone" autocomplete="off" placeholder="+7 (___) ___-__-__" required>
                 <button class="btn btn-form" type="submit">Записаться</button>
               </form>
               <p class="form__personal-data">Нажимая на кнопку вы соглашаетесь с <a href="#" class="contacts__link">обработкой персональных данных</a></p>
@@ -549,47 +549,51 @@
           <a class="footer__link contacts__link" href="#">Политика конфиденциальности</a>
         </div>
         <div class="nav footer__nav">
-          <a href="#" class="nav__element">Услуги и цены</a>
-          <a href="#" class="nav__element">Мастера</a>
-          <a href="#" class="nav__element">Наши работы</a>
-          <a href="#" class="nav__element">Контакты</a>
+          <a href="#prices" class="nav__element">Услуги и цены</a>
+          <a href="#masters" class="nav__element">Мастера</a>
+          <a href="#works" class="nav__element">Наши работы</a>
+          <a href="#contacts" class="nav__element">Контакты</a>
         </div>
       </footer>
     </div>
-    <form class="popup-form fancybox" style="display: none;" id="extended-form" action="">
+    <form class="form popup-form fancybox" style="display: none;" id="extended-form" action="">
       <label for="name">
         Ваше имя
-        <input type="text" name="name">
+        <input type="text" name="name" class="popup-input" required>
       </label>
       <label for="phone">
         Номер телефона
-        <input type="text" name="phone">
+        <input type="tel" name="phone" class="popup-input" required>
       </label>
-      <label for="master-select" class="select-label master-label">
+      <label for="master-select">
         Выберите мастера
-        <select name="master-select" id="master-select">
-          <option value="1">Краснова Ирина</option>
-          <option value="2">Калилова Жанна</option>
-          <option value="3">Киселева Алина</option>
-          <option value="4">Иванова Елена</option>
-        </select>
+        <div class="select-wrapper">
+          <select name="master-select">
+            <option value="1">Краснова Ирина</option>
+            <option value="2">Калилова Жанна</option>
+            <option value="3">Киселева Алина</option>
+            <option value="4">Иванова Елена</option>
+          </select>
+        </div>
       </label>
-      <label for="service" class="select-label service-label">
+      <label for="service">
         Выберите услугу
-        <select name="service" id="service-select">
-          <option value="1">Стрижка и укладка</option>
-          <option value="2">Косметология</option>
-          <option value="3">Маникюр и педикюр</option>
-          <option value="4">Макияж</option>
-          <option value="5">Брови и ресницы</option>
-          <option value="6">Массаж</option>
-        </select>
+        <div class="select-wrapper">
+          <select name="service">
+            <option value="1">Стрижка и укладка</option>
+            <option value="2">Косметология</option>
+            <option value="3">Маникюр и педикюр</option>
+            <option value="4">Макияж</option>
+            <option value="5">Брови и ресницы</option>
+            <option value="6">Массаж</option>
+          </select>
+        </div>
       </label>
       <label for="name">
         Дата визита
         <input type="date" name="name">
       </label>
-      <button class="btn btn-form popup-form__btn">Записаться</button>
+      <button type="submit" class="btn btn-form popup-form__btn">Записаться</button>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/main.min.js" defer></script>

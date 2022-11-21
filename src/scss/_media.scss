@@ -169,9 +169,6 @@
         border-radius: 10px;
     }
 
-    .about-main__video-overlay {
-    }
-
     .about-main__text {
         width: 90%;
         margin: auto;
@@ -345,5 +342,27 @@
 
     .footer__nav {
         display: none;
+    }
+
+    /* popup form */
+    label{
+        flex-direction: column;
+        height: 80px;
+    }
+
+    .popup-input{
+        width: 100%;
+    }
+
+    .select-wrapper{
+        width: 100%;
+    }
+
+    select{
+        width: 100%;
+    }
+
+    input[type="date"]{
+        width: 100%;
     }
 }

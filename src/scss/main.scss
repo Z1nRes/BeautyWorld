@@ -616,26 +616,33 @@
     }
 }
 
-input[type="text"] {
+.input{
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="tel"] {
     height: 44px;
     padding-left: 16px;
     border-radius: 5px;
     border: 2px solid #F8F6F7;
     outline:none;
-    margin-bottom: 20px;
     transition: .2s;
     background-color: transparent;
 }
 
-input[type="text"]::-moz-placeholder {
+input[type="text"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder {
     color: #A0A0A0;
 }
 
-input[type="text"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder {
     color: #A0A0A0;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="tel"]:focus {
     border: 2px solid #FB9475;
     transition: .2s;
 }
@@ -675,13 +682,25 @@ input[type="text"]:focus {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 30%;
+    width: calc(1vw*80);
+    max-width: 500px;
     background-color: #59d0d4;
     border-radius: 10px;
     padding: 50px;
     &__btn{
         margin-top: 30px;
     }
+}
+
+.popup-input{
+    width: 214px;
+}
+
+input[type="date"]{
+    width: 214px;
+    border: 2px solid #F8F6F7;
+    padding: 11px 5px 11px 16px;
+    border-radius: 5px;
 }
 
 label{
@@ -700,29 +719,21 @@ select{
     background: none;
     border: 2px solid #F8F6F7;
     appearance: none;
-    position: relative;
-    
 }
 
-.select-label{
-    &::after{
+.select-wrapper{
+    position: relative;
+    &::before{
         content: "";
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-25%);//двигает объект на половину его высоты вверх
         display: block;
         border-style: solid;
         border-color: #ff7146 transparent transparent transparent;
         border-width: 6px 5px 5px;
-        position: absolute;
-        right: 45px;
-        z-index: -1;
     }
-}
-
-.master-label::after{
-    top: 244px;
-}
-
-.service-label::after{
-    top: 317px;
 }
 
 .popup-form__btn{
