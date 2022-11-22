@@ -100,3 +100,61 @@ manicureLink.addEventListener("click", function(){openTab("manicure"); setActive
 makeupLink.addEventListener("click", function(){openTab("makeup"); setActiveLink('makeupLink')}, false);
 browsLink.addEventListener("click", function(){openTab("brows"); setActiveLink('browsLink')}, false);
 massageLink.addEventListener("click", function(){openTab("massage"); setActiveLink('massageLink')}, false);
+
+// input mask
+
+let phonePopup = document.querySelector('.popup-input-tel');
+let phoneFooter = document.querySelector('.footer-input-tel');
+let maskOptions = {
+    mask: '+{7}(000)000-00-00'
+};
+let maskPopup = IMask(phonePopup, maskOptions);
+let maskFooter = IMask(phoneFooter, maskOptions);
+
+//api fetch
+
+async function postData(url = '', data = {}) {
+    const response = await fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify(data)
+    });
+    return await response.json();
+  }
+  
+//   postData('https://example.com/answer', { answer: 42 })
+//     .then((data) => {
+//       console.log(data); // JSON data parsed by `response.json()` call
+//     });
+  
+
+
+//validation forms
+
+let popupForm = document.querySelector('#extended-form'),
+    requiredFields = popupForm.querySelectorAll('.required');
+
+popupForm.onsubmit = function(e) {
+    e.preventDefault();
+
+
+    requiredFields.forEach(function (input){
+        console.log(input.value);
+        
+        if (input.value === ''){
+            input.style.border = '2px solid red';
+        } else {
+            input.style.border = '2px solid #F8F6F7';
+        }
+    });
+
+
+}
+

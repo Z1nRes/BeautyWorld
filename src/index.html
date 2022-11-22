@@ -13,7 +13,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/> -->
   </head>
   <body>
     <div class="wrapper">
@@ -535,7 +534,7 @@
               <p class="form__description">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</p>
               <form class="form">
                 <input class="input" type="text" name="name" autocomplete="off" placeholder="Ваше имя" required>
-                <input class="input" type="text" name="phone" autocomplete="off" placeholder="+7 (___) ___-__-__" required>
+                <input class="input footer-input-tel" type="tel" name="phone" autocomplete="off" placeholder="+7 (___) ___-__-__" required>
                 <button class="btn btn-form" type="submit">Записаться</button>
               </form>
               <p class="form__personal-data">Нажимая на кнопку вы соглашаетесь с <a href="#" class="contacts__link">обработкой персональных данных</a></p>
@@ -556,19 +555,19 @@
         </div>
       </footer>
     </div>
-    <form class="form popup-form fancybox" style="display: none;" id="extended-form" action="">
+    <form class="form popup-form fancybox" style="display: none;" id="extended-form" action="POST">
       <label for="name">
         Ваше имя
-        <input type="text" name="name" class="popup-input" required>
+        <input type="text" name="name" class="popup-input field popup-input-name required" >
       </label>
       <label for="phone">
         Номер телефона
-        <input type="tel" name="phone" class="popup-input" required>
+        <input type="tel" name="phone" class="popup-input popup-input-tel field required" >
       </label>
       <label for="master-select">
         Выберите мастера
         <div class="select-wrapper">
-          <select name="master-select">
+          <select name="master-select" class="field">
             <option value="1">Краснова Ирина</option>
             <option value="2">Калилова Жанна</option>
             <option value="3">Киселева Алина</option>
@@ -579,7 +578,7 @@
       <label for="service">
         Выберите услугу
         <div class="select-wrapper">
-          <select name="service">
+          <select name="service" class="field">
             <option value="1">Стрижка и укладка</option>
             <option value="2">Косметология</option>
             <option value="3">Маникюр и педикюр</option>
@@ -591,10 +590,11 @@
       </label>
       <label for="name">
         Дата визита
-        <input type="date" name="name">
+        <input type="date" name="date" class="field">
       </label>
       <button type="submit" class="btn btn-form popup-form__btn">Записаться</button>
     </form>
+    <script src="https://unpkg.com/imask"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="js/main.min.js" defer></script>
   </body>
