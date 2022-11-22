@@ -558,16 +558,16 @@
     <form class="form popup-form fancybox" style="display: none;" id="extended-form" action="POST">
       <label for="name">
         Ваше имя
-        <input type="text" name="name" class="popup-input field popup-input-name required" >
+        <input type="text" name="username" class="popup-input popup-input-name required" >
       </label>
       <label for="phone">
         Номер телефона
-        <input type="tel" name="phone" class="popup-input popup-input-tel field required" >
+        <input type="tel" name="userphone" class="popup-input popup-input-tel  required" >
       </label>
       <label for="master-select">
         Выберите мастера
         <div class="select-wrapper">
-          <select name="master-select" class="field">
+          <select name="master-select" class="master-select">
             <option value="1">Краснова Ирина</option>
             <option value="2">Калилова Жанна</option>
             <option value="3">Киселева Алина</option>
@@ -575,10 +575,10 @@
           </select>
         </div>
       </label>
-      <label for="service">
+      <label for="service-select">
         Выберите услугу
         <div class="select-wrapper">
-          <select name="service" class="field">
+          <select name="service-select" class="service-select">
             <option value="1">Стрижка и укладка</option>
             <option value="2">Косметология</option>
             <option value="3">Маникюр и педикюр</option>
@@ -588,11 +588,14 @@
           </select>
         </div>
       </label>
-      <label for="name">
+      <label for="date">
         Дата визита
-        <input type="date" name="date" class="field">
+        <input type="date" name="date">
       </label>
       <button type="submit" class="btn btn-form popup-form__btn">Записаться</button>
+      <div class="form-sended">
+        <span>Ваша форма отправлена успешно!</span>
+      </div>
     </form>
     <script src="https://unpkg.com/imask"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

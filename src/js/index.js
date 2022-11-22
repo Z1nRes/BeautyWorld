@@ -1,6 +1,7 @@
 import "@fancyapps/ui";
 import $ from "jquery";
 
+
 new Swiper('.swiper', {
     slidesPerView: 4,
     loop: true,
@@ -113,7 +114,7 @@ let maskFooter = IMask(phoneFooter, maskOptions);
 
 //api fetch
 
-async function postData(url = '', data = {}) {
+async function postData(url = '', popupData = {}) {
     const response = await fetch(url, {
       method: 'POST',
       mode: 'cors',
@@ -124,37 +125,56 @@ async function postData(url = '', data = {}) {
       },
       redirect: 'follow',
       referrerPolicy: 'no-referrer',
-      body: JSON.stringify(data)
+      body: JSON.stringify(popupData)
     });
     return await response.json();
   }
-  
-//   postData('https://example.com/answer', { answer: 42 })
-//     .then((data) => {
-//       console.log(data); // JSON data parsed by `response.json()` call
-//     });
-  
-
 
 //validation forms
 
 let popupForm = document.querySelector('#extended-form'),
     requiredFields = popupForm.querySelectorAll('.required');
 
-popupForm.onsubmit = function(e) {
-    e.preventDefault();
-
-
-    requiredFields.forEach(function (input){
-        console.log(input.value);
-        
-        if (input.value === ''){
-            input.style.border = '2px solid red';
-        } else {
-            input.style.border = '2px solid #F8F6F7';
-        }
-    });
-
-
+function closeForm(fancyModal){
+    let formSended = popupForm.querySelector('.form-sended');
+    formSended.classList.add('form-sended-active');
+    setInterval(function(){
+        fancyModal.style.display = 'none';
+        popupForm.style.display = 'none';
+        formSended.classList.remove('form-sended-active');
+        location.reload();
+    }, 3000)
 }
+    
+popupForm.addEventListener('submit', function (e){
+    e.preventDefault()
+    
+    const popupData = new FormData(popupForm)
 
+    const username = popupData.get('username')
+    const phone = popupData.get('userphone')
+    const mastersId = popupData.get('master-select')
+    const serviceId = popupData.get('service-select')
+    const date = popupData.get('date')
+
+
+    for (let i=0; i < requiredFields.length; i++){
+        if (!requiredFields[i].value) {
+            requiredFields[i].style.border = '2px solid red';
+        } else {
+            requiredFields[i].style.border = '2px solid #F8F6F7';
+        }
+    }
+
+    if (requiredFields[0].value && requiredFields[1].value){
+        postData('https://beauty-saloon-server.herokuapp.com/api/orders', {
+            name: username, phone: phone, masterId: mastersId, serviceId: serviceId, visitDate: date
+        }).then((popupData) => {
+            if (popupData.status == 'Opened'){
+                let fancyModal = document.querySelector('.fancybox__container');
+                closeForm(fancyModal);
+            }
+        })
+    }
+
+});
