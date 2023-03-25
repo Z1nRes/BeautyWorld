@@ -1,0 +1,4 @@
+/node_modules
+/src/css
+/dist
+/src/js/main.min.js

@@ -1,0 +1,45 @@
+{
+  "name": "beautyworld",
+  "version": "1.0.0",
+  "description": "```\r npm install\r ```",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z1nRes/BeautyWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Z1nRes/BeautyWorld/issues"
+  },
+  "homepage": "https://github.com/Z1nRes/BeautyWorld#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@fancyapps/ui": "^4.0.31",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "browser-sync": "^2.27.10",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.19",
+    "sass": "^1.56.1",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "jquery-validation": "^1.19.5"
+  }
+}

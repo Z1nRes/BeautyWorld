@@ -1,0 +1,368 @@
+@media (max-width: 440px){
+    .header-top{
+        flex-direction: column;
+    }
+    .header__left-side{
+        align-self: flex-start;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width:346px) and (max-width: 540px) {
+    
+    .header__nav {
+        display: none;
+    }
+
+    .hamb{
+        display: flex;
+        align-items: center;
+        &__field{
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    }
+
+    .bar{
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: #000;
+        transition: .2s;
+    }
+    
+    .popup{
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+        display: flex;
+        transition: .3s;
+    }
+
+    .popup.open{
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    body.noscroll{
+        overflow: hidden;
+    }
+
+    .popup #menu{
+        display: flex;
+        flex-direction: column;
+        padding-top: 8%;
+        overflow: scroll;
+    }
+
+    .popup #menu > a{
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+
+    .hamb__field.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamb__field.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamb__field.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .container {
+        max-width: 539px;
+    }
+
+    .headline {
+        font-size: 35px;
+        text-align: center;
+    }
+    /* header */
+
+    .header {
+        padding-top: 35px;
+        &__left-side{
+            display: flex;
+        }
+    }
+
+    .header-main__woman-div{
+        display: none;
+    }
+    .header__logo {
+        font-size: 22px;
+    }
+
+    .header-contacts__phone {
+        font-size: 19px;
+        font-weight: 600;
+    }
+    
+    .header-contacts__timetable {
+        font-size: 11px;
+    }
+    
+    .header-top {
+        padding: 0 20px 50px;
+    }
+
+    .header-main {
+        flex-direction: column;
+    }
+    
+    .header-main__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .slogan-top {
+        font-size: 42px;
+        text-align: center;
+    }
+    
+    .slogan-bottom {
+        font-size: 16px;
+    }
+    
+    .header-main__social {
+        flex-direction: row;
+        margin: 20px 0 40px 0;
+    }
+
+    .social__item {
+        margin: 8px 14px;
+    }
+
+    /* about */
+
+    .about-main {
+        flex-direction: column;
+        align-items: center ;
+    }
+
+    .about-main__video {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 89%;
+    }
+
+    .about-main__video-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .about-main__text {
+        width: 90%;
+        margin: auto;
+    }
+
+    .about-bottom {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0 100px 0;
+    }
+
+    .about-bottom__element {
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    /* services */
+
+    .services-list {
+        width: 70%;
+    }
+
+    .service__item {
+        width: 80%;
+    }
+
+    .service__description {
+        width: 90%;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-headline {
+        width: 90%;
+    }    
+
+    /* prices */
+
+    .prices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prices-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .prices-nav__element {
+        margin: 0 30px 0 0;
+    }
+
+    .prices-list {
+        width: 80%;
+    }
+
+    .price__element {
+        width: 79%;
+    }
+
+
+    /* masters */
+
+    .masters {
+        padding: 90px 0 30px 0;
+    }
+
+    .masters__list {
+        grid-template-columns: 1fr;
+    }
+
+    .masters__lozung {
+        text-align: center;
+    }
+
+    .masters__element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 60px;
+    }
+
+    /* works */
+
+    .works {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px 0 60px 0;
+    }
+
+    .works-header {
+        flex-direction: column;
+    }
+
+    .pagginator {
+        display: none;
+    }
+
+    /* brands */
+
+    .brands__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .brands__img {
+        margin-bottom: 40px;
+    }
+
+    
+
+    /* contacts */
+
+    .wrapper__contacts {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .contacts__description {
+        text-align: center;
+    }
+
+    .contacts__social {
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .contacts-social__item {
+        margin: 0;
+    }
+
+    .contacts__social-headline {
+        margin: 32px 0 28px 0;
+    }
+
+    .contacts__form {
+        margin: 50px;
+    }
+
+
+    .contacts__form {
+        width: 90%;
+    }
+
+
+    /* footer */
+
+    .footer {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .footer__left-side {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .footer__headline {
+        margin-bottom: 32px;
+    }
+
+    .footer__nav {
+        display: none;
+    }
+
+    /* popup form */
+    label{
+        flex-direction: column;
+        height: 80px;
+    }
+
+    .popup-input{
+        width: 100%;
+    }
+
+    .select-wrapper{
+        width: 100%;
+    }
+
+    select{
+        width: 100%;
+    }
+
+    input[type="date"]{
+        width: 100%;
+    }
+}
